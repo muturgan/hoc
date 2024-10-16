@@ -508,7 +508,7 @@ async fn static_file(
 #[get("/favicon.ico")]
 #[allow(clippy::unused_async)]
 async fn favicon32() -> HttpResponse {
-    let data = &template_statics::favicon32_png;
+    let data = &template_statics::favicon_svg;
     HttpResponse::Ok()
         .content_type(data.mime.clone())
         .body(data.content)
